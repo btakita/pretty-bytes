@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const tsd_1 = require("tsd");
+const prettyBytes = require(".");
+const options = {};
+tsd_1.expectType(prettyBytes(1337));
+tsd_1.expectType(prettyBytes(42, { signed: true }));
+tsd_1.expectType(prettyBytes(1337, { locale: 'de' }));
+tsd_1.expectType(prettyBytes(1337, { locale: true }));
+tsd_1.expectType(prettyBytes(1337, { bits: true }));
+tsd_1.expectType(prettyBytes(1337, { binary: true }));
